@@ -22,12 +22,13 @@ const Home = () => {
             opportunities starting from May 2023. Do reach out to me if you have
             any amazing opportunities.
           </p>
-          <div className="grid sm:grid-cols-3 md:grid-cols-3">
+          {/* <div className="grid sm:grid-rows-3 md:grid-cols-3"> */}
+          <div className="flex justify-start">
             <a
               href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+              className="group text-white w-fit px-2 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
             >
               Resume
               <span className="group-hover:rotate-90 duration-300">
@@ -38,7 +39,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/gowtham-c/"
               target="_blank"
               rel="noreferrer"
-              className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+              className="group text-white w-fit px-2 py-2 mx-5 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
             >
               LinkedIn
               <span>
@@ -49,9 +50,9 @@ const Home = () => {
               href="https://github.com/gowthambalboa"
               target="_blank"
               rel="noreferrer"
-              className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+              className="group text-white w-fit px-2 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
             >
-              Github
+              GitHub
               <span>
                 <AiOutlineGithub size={25} className="ml-1" />
               </span>
