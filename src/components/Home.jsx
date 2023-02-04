@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 
 const Home = () => {
   return (
@@ -21,16 +22,38 @@ const Home = () => {
             opportunities starting from May 2023. Do reach out to me if you have
             any amazing opportunities.
           </p>
-          <div>
+          <div className="grid sm:grid-cols-3 md:grid-cols-3">
             <a
               href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+              className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
             >
               Resume
               <span className="group-hover:rotate-90 duration-300">
                 <MdKeyboardArrowRight size={25} className="ml-1" />
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gowtham-c/"
+              target="_blank"
+              rel="noreferrer"
+              className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+            >
+              LinkedIn
+              <span>
+                <AiOutlineLinkedin size={25} className="ml-1" />
+              </span>
+            </a>
+            <a
+              href="https://github.com/gowthambalboa"
+              target="_blank"
+              rel="noreferrer"
+              className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+            >
+              Github
+              <span>
+                <AiOutlineGithub size={25} className="ml-1" />
               </span>
             </a>
           </div>
