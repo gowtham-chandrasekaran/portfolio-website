@@ -2,6 +2,7 @@ import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -43,7 +44,7 @@ const Home = () => {
             >
               LinkedIn
               <span>
-                <AiOutlineLinkedin size={25} className="ml-1" />
+                <FaLinkedin size={22} className="ml-1" />
               </span>
             </a>
             <a
