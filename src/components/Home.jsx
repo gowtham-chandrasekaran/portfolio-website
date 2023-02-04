@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../assets/heroImage.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import { AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
