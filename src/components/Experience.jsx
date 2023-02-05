@@ -83,6 +83,7 @@ const Experience = () => {
                 designers, product managers and DevOps engineers, to deliver
                 high-quality projects on time and within budget.
               </p>
+              <br />
             </div>
           </div>
         </div>
