@@ -83,12 +83,6 @@ const Experience = () => {
                 designers, product managers and DevOps engineers, to deliver
                 high-quality projects on time and within budget.
               </p>
-              <p class="text-sm sm:text-lg pb-1">
-                • Worked in Agile/Scrum methodology, using JIRA for project
-                management.
-              </p>
-              <br />
-              <br />
             </div>
           </div>
         </div>
