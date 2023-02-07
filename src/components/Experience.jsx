@@ -13,7 +13,7 @@ const Experience = () => {
           </p>
         </div>
 
-        <div class="w-full mx-auto">
+        <div class="w-full mx-auto hover:scale-105 duration-500">
           <div class="w-full shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto">
             <div
               class="flex items-center h-6 rounded-t bg-gray-100 border-b border-gray-500 text-center text-black"
