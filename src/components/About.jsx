@@ -14,7 +14,7 @@ const About = () => {
           </p>
         </div>
         <div class="mx-auto max-w-5xl px-4 py-8">
-          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md hover:scale-105 duration-500 shadow-blue-600 p-8">
+          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md betterhover:scale-105 duration-500 shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
                 alt="Man"
