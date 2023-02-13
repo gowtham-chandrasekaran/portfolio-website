@@ -49,40 +49,29 @@ const Experience = () => {
               <p class="text-sm sm:text-lg pb-1">
                 Tata Consultancy Services &emsp; 05/2019 - 05/2021
               </p>
-              <p class="text-sm sm:text-lg pb-1">
-                Software Engineer &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                India
-              </p>
+              <p class="text-sm sm:text-lg pb-1">Software Engineer, India</p>
               <br />
               <p class="text-sm sm:text-lg pb-1">
-                • Constructed React components on a server health monitoring
-                dashboard to visualize CPU usage rate, Disk Capacity Usage,
-                Network throughput that improved the readability of metrics.
-              </p>
-              <p class="text-sm sm:text-lg pb-1">
-                • Created RESTful APIs to access server health metrics from the
-                database and processed them ensuring data consistency and
-                security.
-              </p>
-              <p class="text-sm sm:text-lg pb-1">
-                • Implemented a 2-factor User authentication page that performs
-                password and OTP verification which improved the security using
-                Angular and NodeJS.
-              </p>
-              <p class="text-sm sm:text-lg pb-1">
-                • Created concept mockups and wireframes that increased overall
-                client satisfaction and implemented them in the production
-                environment.
-              </p>
-              <p class="text-sm sm:text-lg pb-1">
-                • Developed unit tests using TDD to ensure code quality and
-                prevent regressions.
-              </p>
-              <p class="text-sm sm:text-lg pb-1">
-                • Collaborated with cross-functional teams, including UX
-                designers, product managers and DevOps engineers, to deliver
+                With a focus on delivering high-quality and secure software, I
+                have made significant contributions to the development of a
+                server health monitoring dashboard. I utilized my expertise in
+                React to construct components that improved the readability of
+                metrics by visualizing CPU usage rate, disk capacity usage, and
+                network throughput. To ensure data consistency and security, I
+                created RESTful APIs to access server health metrics from the
+                database. To improve security, I implemented a 2-factor user
+                authentication page that performs password and OTP verification
+                using Angular and NodeJS. Additionally, I was responsible for
+                creating concept mockups and wireframes that increased overall
+                client satisfaction and then successfully implementing them in
+                the production environment. Adhering to a Test-Driven
+                Development approach, I developed unit tests to ensure code
+                quality and prevent regressions. Collaborating with
+                cross-functional teams, including UX designers, product
+                managers, and DevOps engineers, I have consistently delivered
                 high-quality projects on time and within budget.
               </p>
+
               <br />
             </div>
           </div>
