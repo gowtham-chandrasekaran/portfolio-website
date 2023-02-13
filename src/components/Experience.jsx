@@ -57,19 +57,17 @@ const Experience = () => {
                 server health monitoring dashboard. I utilized my expertise in
                 React to construct components that improved the readability of
                 metrics by visualizing CPU usage rate, disk capacity usage, and
-                network throughput. To ensure data consistency and security, I
-                created RESTful APIs to access server health metrics from the
-                database. To improve security, I implemented a 2-factor user
+                network throughput. To ensure data consistency, I created
+                RESTful APIs to access server health metrics from the database.
+                To improve security, I implemented a 2-factor user
                 authentication page that performs password and OTP verification
                 using Angular and NodeJS. Additionally, I was responsible for
                 creating concept mockups and wireframes that increased overall
                 client satisfaction and then successfully implementing them in
-                the production environment. Adhering to a Test-Driven
-                Development approach, I developed unit tests to ensure code
-                quality and prevent regressions. Collaborating with
-                cross-functional teams, including UX designers, product
-                managers, and DevOps engineers, I have consistently delivered
-                high-quality projects on time and within budget.
+                the production environment. Collaborating with cross-functional
+                teams, including UX designers, product managers, and DevOps
+                engineers, I have consistently delivered high-quality projects
+                on time and within budget.
               </p>
 
               <br />
