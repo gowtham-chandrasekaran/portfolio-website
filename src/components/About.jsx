@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+      className="w-full py-[80px] bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -14,7 +14,7 @@ const About = () => {
           </p>
         </div>
         <div class="mx-auto max-w-5xl px-4 py-8">
-          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md betterhover:scale-105 duration-500 shadow-blue-600 p-8">
+          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
                 alt="Man"
@@ -25,10 +25,7 @@ const About = () => {
               <blockquote class="sm:col-span-2">
                 <p class="text-sm sm:text-lg text-white font-medium">
                   I'm pursuing MS in Computer Science at San Jose State
-                  University. I will be graduating in May 2023. With 2 years of
-                  work experience, I have honed my skills in front-end and
-                  back-end technologies and have a track record of delivering
-                  high-quality, reliable software solutions.
+                  University. I will be graduating in May 2023.
                 </p>
                 <br />
                 <p class="text-sm sm:text-lg text-white font-medium">

@@ -1,10 +1,11 @@
 import React from "react";
+import exp from "../assets/expimg.png";
 
 const Experience = () => {
   return (
     <div
       name="experience"
-      className="w-full pb-20 sm:pb-0 h-screen bg-gradient-to-b from-black to-gray-800 text-white"
+      className="w-full py-[80px] pb-20 sm:pb-0 bg-gradient-to-b from-black to-gray-800 text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -13,66 +14,44 @@ const Experience = () => {
           </p>
         </div>
 
-        <div class="w-full mx-auto betterhover:scale-105 duration-500">
-          <div class="w-full shadow-2xl subpixel-antialiased rounded h-64 bg-black border-black mx-auto">
-            <div
-              class="flex items-center h-6 rounded-t bg-gray-100 border-b border-gray-500 text-center text-black"
-              id="headerTerminal"
-            >
-              <div
-                class="flex ml-2 items-center text-center border-red-900 bg-red-500 shadow-inner rounded-full w-3 h-3"
-                id="closebtn"
-              ></div>
-              <div
-                class="ml-2 border-yellow-900 bg-yellow-500 shadow-inner rounded-full w-3 h-3"
-                id="minbtn"
-              ></div>
-              <div
-                class="ml-2 border-green-900 bg-green-500 shadow-inner rounded-full w-3 h-3"
-                id="maxbtn"
-              ></div>
-              <div class="mx-auto pr-16" id="terminaltitle">
-                <p class="text-center text-sm">Terminal</p>
-              </div>
-            </div>
-            <div
-              class="pl-1 pt-1 h-auto  text-green-400 font-mono text-xs bg-black"
-              id="console"
-            >
-              <p class="text-sm sm:text-lg pb-1">
-                Last login: Sat Feb 4 01:32:15 on ttys005
-              </p>
-              <p class="text-sm sm:text-lg pb-1">
-                gowthamc@gowtham-chandrasekaran ~ % cat experience.txt
-              </p>
-              <br />
-              <p class="text-sm sm:text-lg pb-1">
-                Tata Consultancy Services &emsp; 05/2019 - 05/2021
-              </p>
-              <p class="text-sm sm:text-lg pb-1">Software Engineer, India</p>
-              <br />
-              <p class="text-sm sm:text-lg pb-1">
-                With a focus on delivering high-quality and secure software, I
-                have made significant contributions to the development of a
-                server health monitoring dashboard. I utilized my expertise in
-                React to construct components that improved the readability of
-                metrics by visualizing CPU usage rate, disk capacity usage, and
-                network throughput. To ensure data consistency, I created
-                RESTful APIs to access server health metrics from the database.
-                To improve security, I implemented a 2-factor user
-                authentication page that performs password and OTP verification
-                using Angular and NodeJS. Additionally, I was responsible for
-                creating concept mockups and wireframes that increased overall
-                client satisfaction and then successfully implementing them in
-                the production environment. Collaborating with cross-functional
-                teams, including UX designers, product managers, and DevOps
-                engineers, I have consistently delivered high-quality projects
-                on time and within budget.
-              </p>
+        <div class="mx-auto max-w-5xl px-4 py-8">
+          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md shadow-blue-600 p-8">
+            <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
+              <img
+                alt="Work Experience"
+                src={exp}
+                class="aspect-square ml-11 sm:ml-0 rounded-lg object-cover w-2/3 sm:w-full"
+              />
 
-              <br />
+              <blockquote class="sm:col-span-2">
+                <p class="text-lg text-white font-medium">
+                  Tata Consultancy Services
+                </p>
+                <p class="text-sm sm:text-md text-white font-medium">
+                  May 2019 - May 2021
+                </p>
+                <br />
+                <p class="text-sm text-white font-medium">
+                  Assigned with the following tasks during my tenure:
+                  <br />
+                  <br />
+                  <li>Web Application Development</li>
+                  <li>Responsive UI design</li>
+                  <li>Creating wireframes</li>
+                  <li>
+                    Analysing service requests, events, and incidents on
+                    ServiceNow
+                  </li>
+                  <li>Handling SQL and NoSQL database</li>
+                  <li>Debugging and Application Maintenance</li>
+                  <li>Creating REST APIs</li>
+                  <li>Connecting and fetching data from the database</li>
+                  <li>Defect Analysis and Unit Testing</li>
+                  <li>Agile methodology development</li>
+                </p>
+              </blockquote>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>

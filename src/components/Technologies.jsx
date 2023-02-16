@@ -9,6 +9,8 @@ import python from "../assets/python.png";
 import angular from "../assets/angular.png";
 import node from "../assets/node.png";
 import sql from "../assets/sql.png";
+import nosql from "../assets/nosql.png";
+import java from "../assets/java.png";
 
 const Technologies = () => {
   const techs = [
@@ -37,6 +39,12 @@ const Technologies = () => {
       style: "shadow-blue-600",
     },
     {
+      id: 8,
+      src: angular,
+      title: "Angular",
+      style: "shadow-red-500",
+    },
+    {
       id: 5,
       src: tailwind,
       title: "Tailwind",
@@ -55,22 +63,29 @@ const Technologies = () => {
       style: "shadow-yellow-700",
     },
     {
-      id: 8,
-      src: angular,
-      title: "Angular",
-      style: "shadow-red-500",
+      id: 11,
+      src: java,
+      title: "Java",
+      style: "shadow-green-700",
     },
+
     {
       id: 9,
       src: sql,
       title: "SQL",
       style: "shadow-blue-400",
     },
+    {
+      id: 10,
+      src: nosql,
+      title: "NoSQL",
+      style: "shadow-blue-400",
+    },
   ];
   return (
     <div
       name="technologies"
-      className="bg-gradient-to-b from-black to-gray-800 w-full h-screen"
+      className="bg-gradient-to-b py-[80px] from-black to-gray-800 w-full"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>

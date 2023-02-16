@@ -55,24 +55,20 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b pt-16 sm:pt-0 from-gray-800 to-black w-full text-white md:h-screen"
+      className="bg-gradient-to-b py-[80px] pt-16 from-gray-800 to-black w-full text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
           </p>
-          <p className="py-6">Check out some of my work</p>
+          {/* <p className="py-6">Check out some of my work</p> */}
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src, href, gitlink }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 betterhover:scale-105"
-              />
+            <div key={id} className="shadow-md shadow-blue-600 rounded-md">
+              <img src={src} alt="" className="rounded-md" />
               <div className="flex items-center justify-center">
                 <a
                   href={href}
