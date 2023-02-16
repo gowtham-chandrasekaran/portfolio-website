@@ -11,6 +11,8 @@ import node from "../assets/node.png";
 import sql from "../assets/sql.png";
 import nosql from "../assets/nosql.png";
 import java from "../assets/java.png";
+import cplus from "../assets/cplus.png";
+import aws from "../assets/aws.png";
 
 const Technologies = () => {
   const techs = [
@@ -66,20 +68,32 @@ const Technologies = () => {
       id: 11,
       src: java,
       title: "Java",
-      style: "shadow-green-700",
+      style: "shadow-red-700",
+    },
+    {
+      id: 12,
+      src: cplus,
+      title: "C++",
+      style: "shadow-blue-700",
     },
 
     {
       id: 9,
       src: sql,
-      title: "SQL",
+      title: "MySQL",
       style: "shadow-blue-400",
     },
     {
       id: 10,
       src: nosql,
-      title: "NoSQL",
+      title: "MongoDB",
       style: "shadow-blue-400",
+    },
+    {
+      id: 13,
+      src: aws,
+      title: "AWS",
+      style: "shadow-orange-400",
     },
   ];
   return (

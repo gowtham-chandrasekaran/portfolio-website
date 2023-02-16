@@ -12,6 +12,9 @@
     /* font-family: "Special Elite", cursive; */
   }
 }
+ul.exp {
+  list-style-type: circle;
+}
 
 .bg-container {
   background: #cc2b5e; /* fallback for old browsers */

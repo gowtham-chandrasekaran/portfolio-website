@@ -10,7 +10,7 @@ const Experience = () => {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Experience
+            Work Experience
           </p>
         </div>
 
@@ -31,23 +31,25 @@ const Experience = () => {
                   May 2019 - May 2021
                 </p>
                 <br />
-                <p class="text-sm text-white font-medium">
+                <p class="text-sm sm:text-lg text-white font-medium">
                   Assigned with the following tasks during my tenure:
                   <br />
                   <br />
-                  <li>Web Application Development</li>
-                  <li>Responsive UI design</li>
-                  <li>Creating wireframes</li>
-                  <li>
-                    Analysing service requests, events, and incidents on
-                    ServiceNow
-                  </li>
-                  <li>Handling SQL and NoSQL database</li>
-                  <li>Debugging and Application Maintenance</li>
-                  <li>Creating REST APIs</li>
-                  <li>Connecting and fetching data from the database</li>
-                  <li>Defect Analysis and Unit Testing</li>
-                  <li>Agile methodology development</li>
+                  <ul className="exp">
+                    <li> Web Application Development</li>
+                    <li> Responsive UI design</li>
+                    <li> Creating wireframes</li>
+                    <li>
+                      Analysing service requests, events, and incidents on
+                      ServiceNow
+                    </li>
+                    <li> Handling SQL and NoSQL database</li>
+                    <li> Debugging and Application Maintenance</li>
+                    <li> Creating REST APIs</li>
+                    <li> Connecting and fetching data from the database</li>
+                    <li> Defect Analysis and Unit Testing</li>
+                    <li> Agile methodology development</li>
+                  </ul>
                 </p>
               </blockquote>
             </div>

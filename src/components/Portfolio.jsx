@@ -58,7 +58,7 @@ const Portfolio = () => {
       className="bg-gradient-to-b py-[80px] pt-16 from-gray-800 to-black w-full text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+        <div className="pb-[50px]">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Portfolio
           </p>
@@ -89,6 +89,18 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center pt-[50px]">
+          <p className="inline">
+            <a
+              href="https://github.com/gowthambalboa?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              className="group text-white w-fit px-2 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+            >
+              Click here to see more
+            </a>
+          </p>
         </div>
       </div>
     </div>
