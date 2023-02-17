@@ -25,10 +25,10 @@ const Home = () => {
           >
             Hi, I'm Gowtham Chandrasekaran!
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
+          <p className="text-white py-4 max-w-md">
             I'm currently looking for Software and Full Stack Developer
             opportunities starting from May 2023. Do reach out to me if you have
-            any amazing opportunities.
+            any opportunities.
           </p>
           {/* <div className="grid sm:grid-rows-3 md:grid-cols-3"> */}
           <div className="flex justify-start">

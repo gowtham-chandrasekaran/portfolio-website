@@ -16,6 +16,23 @@ ul.exp {
   list-style-type: circle;
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.textinbox {
+  margin: 7px 0 7px 0;
+}
+
+.git {
+  color: #005bbb;
+  position: absolute;
+  bottom: 10px;
+}
 .bg-container {
   background: #cc2b5e; /* fallback for old browsers */
   background: -webkit-linear-gradient(

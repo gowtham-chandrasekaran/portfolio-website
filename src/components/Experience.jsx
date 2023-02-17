@@ -14,7 +14,7 @@ const Experience = () => {
           </p>
         </div>
 
-        <div class="mx-auto max-w-5xl px-4 py-8">
+        <div class="mx-auto px-4 sm:px-0 py-8">
           <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
@@ -24,18 +24,20 @@ const Experience = () => {
               />
 
               <blockquote class="sm:col-span-2">
-                <p class="text-lg text-white font-medium">
+                <p class="text-2xl text-blue-600 font-medium">
                   Tata Consultancy Services
                 </p>
                 <p class="text-sm sm:text-md text-white font-medium">
                   May 2019 - May 2021
                 </p>
                 <br />
-                <p class="text-sm sm:text-lg text-white font-medium">
-                  Assigned with the following tasks during my tenure:
+                <p class="text-white font-medium">
+                  <span className="text-md">
+                    Assigned with the following tasks during my tenure:
+                  </span>
                   <br />
                   <br />
-                  <ul className="exp">
+                  <ul className="exp text-md">
                     <li> Web Application Development</li>
                     <li> Responsive UI design</li>
                     <li> Creating wireframes</li>

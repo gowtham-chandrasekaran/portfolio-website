@@ -13,7 +13,7 @@ const About = () => {
             Education
           </p>
         </div>
-        <div class="mx-auto max-w-5xl px-4 py-8">
+        <div class="w-full mx-auto px-4 py-8">
           <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
@@ -23,10 +23,10 @@ const About = () => {
               />
 
               <blockquote class="sm:pt-[15px] sm:col-span-2">
-                <p class="text-lg text-white font-medium">
+                <p class="text-2xl text-blue-600 font-medium">
                   MS in Computer Science
                 </p>
-                <p class="text-sm sm:text-md text-white font-medium">
+                <p class="text-lg sm:text-md text-blue-600 font-medium">
                   San Jose State University
                 </p>
                 <p class="text-sm sm:text-md text-white font-medium">
@@ -37,10 +37,10 @@ const About = () => {
                 </p>
                 <br />
                 <br />
-                <p class="text-lg text-white font-medium">
+                <p class="text-2xl text-blue-600 font-medium">
                   BE in Computer Science and Engineering
                 </p>
-                <p class="text-sm sm:text-md text-white font-medium">
+                <p class="text-lg sm:text-md text-blue-600 font-medium">
                   Anna University
                 </p>
                 <p class="text-sm sm:text-md text-white font-medium">
