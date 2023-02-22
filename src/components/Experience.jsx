@@ -42,6 +42,10 @@ const Experience = () => {
                     <li> Responsive UI design</li>
                     <li> Creating wireframes</li>
                     <li>
+                      Using AWS services like Lambda, S3, DynamoDB to solve
+                      business problems
+                    </li>
+                    <li>
                       Analysing service requests, events, and incidents on
                       ServiceNow
                     </li>
