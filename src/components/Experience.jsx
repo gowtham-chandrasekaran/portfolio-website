@@ -3,10 +3,7 @@ import exp from "../assets/expimg.png";
 
 const Experience = () => {
   return (
-    <div
-      name="experience"
-      className="w-full py-[80px] pb-20 sm:pb-0 text-white"
-    >
+    <div name="experience" className="w-full py-[80px] sm:pb-0 text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-3xl sm:text-4xl font-bold inline border-b-4 border-gray-500">

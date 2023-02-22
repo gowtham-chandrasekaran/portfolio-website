@@ -87,7 +87,7 @@ const Portfolio = () => {
     // },
   ];
   return (
-    <div name="portfolio" className=" pb-[0px] pt-16 w-full text-white">
+    <div name="portfolio" className=" py-[80px] w-full text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-[50px]">
           <p className="text-3xl sm:text-4xl font-bold inline border-b-4 border-gray-500">
