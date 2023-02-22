@@ -24,7 +24,7 @@ const Experience = () => {
               />
 
               <blockquote class="sm:col-span-2">
-                <p class="text-2xl text-blue-600 font-medium">
+                <p class="text-2xl sm:text-xl text-blue-600 font-medium">
                   Tata Consultancy Services
                 </p>
                 <p class="text-sm sm:text-md text-white font-medium">
@@ -37,7 +37,7 @@ const Experience = () => {
                   </span>
                   <br />
                   <br />
-                  <ul className="exp text-md">
+                  <ul className="exp text-sm">
                     <li> Web Application Development</li>
                     <li> Responsive UI design</li>
                     <li> Creating wireframes</li>

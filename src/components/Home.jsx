@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="w-full pt-[56px] bg-gradient-to-b from-black to-gray-800 px-4"
+      className="w-full pt-[56px] bg-gradient-to-b from-black to-gray-800 py-3 sm:h-screen px-4"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full py-12 sm:py-0 px-4 md:flex-row">
         <div className="py-[60px]">
           <img
             src={HeroImage}

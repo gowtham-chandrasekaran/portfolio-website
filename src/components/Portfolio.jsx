@@ -89,7 +89,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b py-[80px] pt-16 from-gray-800 to-black w-full text-white"
+      className="bg-gradient-to-b pb-[0px] pt-16 from-gray-800 to-black w-full text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-[50px]">
@@ -103,13 +103,15 @@ const Portfolio = () => {
           {portfolios.map(({ id, title, text, link }) => (
             <div
               key={id}
-              className="py-[30px] px-[65px] sm:px-[35px] text-center rounded-md shadow-md shadow-blue-600 bg-gradient-to-b from-gray-800 to-black"
+              className="py-[20px] md:py-[30px] px-[65px] sm:px-[35px] text-center rounded-md shadow-md shadow-blue-600 bg-gradient-to-b from-gray-800 to-black"
             >
               <div className="flex flex-col justify-center box">
-                <div className="textinbox text-blue-600 text-3xl">{title}</div>
+                <div className="mx-[2px] my-[3px] text-blue-600 text-2xl sm:text-xl">
+                  {title}
+                </div>
                 <div>
                   <ul>
-                    <li className="text-md">{text}</li>
+                    <li className="text-sm">{text}</li>
                   </ul>
                 </div>
                 <div>
