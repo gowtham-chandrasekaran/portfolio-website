@@ -128,11 +128,7 @@ const Technologies = () => {
           {techs.map(({ id, src, title, style }) => (
             <motion.div
               key={id}
-              className={
-                "bg-gray-800 shadow-md hover:scale-105 duration-500 py-2 rounded-lg" +
-                " " +
-                style
-              }
+              className={"bg-gray-800 shadow-md py-2 rounded-lg" + " " + style}
               variants={divAnimate}
             >
               <motion.img
