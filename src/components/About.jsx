@@ -1,5 +1,15 @@
 import React from "react";
 import education from "../assets/education.png";
+import { motion, Variants } from "framer-motion";
+
+const divAnimate = {
+  offscreen: { x: 0, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
 
 const About = () => {
   return (
@@ -10,7 +20,14 @@ const About = () => {
             Education
           </p>
         </div>
-        <div class="w-full mx-auto px-4 py-8">
+        <motion.div
+          class="w-full mx-auto px-4 py-8"
+          className="py-[60px]"
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: true, amount: 0.2 }}
+          variants={divAnimate}
+        >
           <section class="rounded-lg bg-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
@@ -49,7 +66,7 @@ const About = () => {
               </blockquote>
             </div>
           </section>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

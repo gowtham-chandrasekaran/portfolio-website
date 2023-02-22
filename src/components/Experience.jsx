@@ -1,5 +1,15 @@
 import React from "react";
 import exp from "../assets/expimg.png";
+import { motion, Variants } from "framer-motion";
+
+const divAnimate = {
+  offscreen: { x: 0, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+};
 
 const Experience = () => {
   return (
@@ -11,7 +21,13 @@ const Experience = () => {
           </p>
         </div>
 
-        <div class="mx-auto px-4 sm:px-0 py-8">
+        <motion.div
+          class="mx-auto px-4 sm:px-0 py-8"
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{ once: true, amount: 0.2 }}
+          variants={divAnimate}
+        >
           <section class="rounded-lg bg-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
@@ -57,7 +73,7 @@ const Experience = () => {
               </blockquote>
             </div>
           </section>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

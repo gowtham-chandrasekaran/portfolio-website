@@ -3,19 +3,48 @@ import HeroImage from "../assets/dp.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
+import { motion, Variants } from "framer-motion";
+
+const imageAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.5, duration: 2 },
+  },
+};
+
+const headAnimate = {
+  offscreen: { x: 100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { ease: "easeOut", type: "spring", bounce: 0.5, duration: 2 },
+  },
+};
 
 const Home = () => {
   return (
     <div name="home" className="w-full py-[56px] h-full sm:h-screen px-4">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full py-12 sm:py-0 px-4 md:flex-row">
-        <div className="py-[60px]">
+        <motion.div
+          className="py-[60px]"
+          initial={"offscreen"}
+          animate={"onscreen"}
+          variants={imageAnimate}
+        >
           <img
             src={HeroImage}
             alt="my dp"
             className="rounded-3xl shadow-md shadow-blue-600 mx-auto max-w-lg w-2/3 md:w-full"
           />
-        </div>
-        <div className="flex flex-col justify-center sm:pl-[150px] h-full py-[60px] pt-[10px] sm:pt-[50px]">
+        </motion.div>
+        <motion.div
+          className="flex flex-col justify-center sm:pl-[150px] h-full py-[60px] pt-[10px] sm:pt-[50px]"
+          initial={"offscreen"}
+          animate={"onscreen"}
+          variants={headAnimate}
+        >
           <h2
             className="text-4xl header-text sm:text-5xl font-bold text-white
           "
@@ -27,7 +56,6 @@ const Home = () => {
             opportunities starting from May 2023. Do reach out to me if you have
             any opportunities.
           </p>
-          {/* <div className="grid sm:grid-rows-3 md:grid-cols-3"> */}
           <div className="flex justify-start">
             <a
               href="/Resume.pdf"
@@ -63,7 +91,7 @@ const Home = () => {
               </span>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
