@@ -7,7 +7,7 @@ import React from "react";
 // import sixth from "../assets/portfolio/6.png";
 // import seventh from "../assets/portfolio/7.png";
 import { AiOutlineGithub } from "react-icons/ai";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const divAnimate = {
   offscreen: { x: 0, opacity: 0 },

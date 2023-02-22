@@ -13,7 +13,7 @@ import nosql from "../assets/nosql.png";
 import java from "../assets/java.png";
 import cplus from "../assets/cplus.png";
 import aws from "../assets/aws.png";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const divAnimate = {
   offscreen: { x: 0, opacity: 0 },

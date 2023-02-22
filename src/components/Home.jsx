@@ -3,7 +3,7 @@ import HeroImage from "../assets/dp.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const imageAnimate = {
   offscreen: { x: -100, opacity: 0 },
@@ -30,7 +30,7 @@ const Home = () => {
         <motion.div
           className="py-[60px]"
           initial={"offscreen"}
-          animate={"onscreen"}
+          whileInView={"onscreen"}
           variants={imageAnimate}
         >
           <img

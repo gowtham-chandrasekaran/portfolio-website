@@ -1,6 +1,6 @@
 import React from "react";
 import education from "../assets/education.png";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const divAnimate = {
   offscreen: { x: 0, opacity: 0 },
