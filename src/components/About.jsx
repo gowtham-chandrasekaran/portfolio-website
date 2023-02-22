@@ -3,10 +3,7 @@ import education from "../assets/education.png";
 
 const About = () => {
   return (
-    <div
-      name="education"
-      className="w-full py-[80px] bg-gradient-to-b from-gray-800 to-black text-white"
-    >
+    <div name="education" className="w-full py-[80px] text-white">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-3xl sm:text-4xl font-bold inline border-b-4 border-gray-500">
@@ -14,7 +11,7 @@ const About = () => {
           </p>
         </div>
         <div class="w-full mx-auto px-4 py-8">
-          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md shadow-blue-600 p-8">
+          <section class="rounded-lg bg-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
                 alt="Man"

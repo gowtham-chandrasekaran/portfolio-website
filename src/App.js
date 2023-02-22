@@ -9,7 +9,7 @@ import Technologies from "./components/Technologies";
 
 function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-black to-gray-900">
       <NavBar />
       <Home />
       <About />

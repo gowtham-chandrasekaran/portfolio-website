@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <div
       name="experience"
-      className="w-full py-[80px] pb-20 sm:pb-0 bg-gradient-to-b from-black to-gray-800 text-white"
+      className="w-full py-[80px] pb-20 sm:pb-0 text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -15,7 +15,7 @@ const Experience = () => {
         </div>
 
         <div class="mx-auto px-4 sm:px-0 py-8">
-          <section class="rounded-lg bg-gradient-to-b from-black to-gray-800 shadow-md shadow-blue-600 p-8">
+          <section class="rounded-lg bg-gray-800 shadow-md shadow-blue-600 p-8">
             <div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
               <img
                 alt="Work Experience"
