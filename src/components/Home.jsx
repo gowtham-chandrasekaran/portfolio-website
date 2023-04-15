@@ -52,9 +52,9 @@ const Home = () => {
             Hi, I'm Gowtham Chandrasekaran!
           </h2>
           <p className="text-white py-4 max-w-md">
-            I'm currently looking for Software and Full Stack Developer
-            opportunities starting from May 2023. Do reach out to me if you have
-            any opportunities.
+            As a full stack engineer and machine learning enthusiast, I leverage
+            my passion for cutting-edge technology to build innovative solutions
+            that drive business success.
           </p>
           <div className="flex justify-start">
             <a
