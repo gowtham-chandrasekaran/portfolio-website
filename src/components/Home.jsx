@@ -80,7 +80,7 @@ const Home = () => {
               </span>
             </a>
             <a
-              href="https://github.com/gowthambalboa"
+              href="https://github.com/gowtham-chandrasekaran"
               target="_blank"
               rel="noreferrer"
               className="group text-white w-fit px-2 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
