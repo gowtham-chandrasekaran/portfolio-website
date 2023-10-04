@@ -44,10 +44,10 @@ const About = () => {
                   San Jose State University
                 </p>
                 <p class="text-sm sm:text-md text-white font-medium">
-                  Aug 2021 - May 2023
+                  Aug 2021 - Dec 2023
                 </p>
                 <p class="text-sm sm:text-md text-white font-medium">
-                  GPA: 4.0/4.0
+                  GPA: 3.92/4.0
                 </p>
                 <br />
                 <br />
