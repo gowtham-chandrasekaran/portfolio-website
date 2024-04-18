@@ -3,6 +3,7 @@ import HeroImage from "../assets/dp.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const imageAnimate = {
@@ -40,7 +41,7 @@ const Home = () => {
           />
         </motion.div>
         <motion.div
-          className="flex flex-col justify-center sm:pl-[150px] h-full py-[60px] pt-[10px] sm:pt-[50px]"
+          className="flex flex-col flex-wrap justify-center sm:pl-[150px] h-full py-[60px] pt-[10px] sm:pt-[50px]"
           initial={"offscreen"}
           animate={"onscreen"}
           variants={headAnimate}
@@ -56,7 +57,7 @@ const Home = () => {
             my passion for cutting-edge technology to build innovative solutions
             that drive business success.
           </p>
-          <div className="flex justify-start">
+          <div className="flex flex-wrap justify-start sm:flex-row">
             <a
               href="/Resume.pdf"
               target="_blank"
@@ -83,11 +84,22 @@ const Home = () => {
               href="https://github.com/gowtham-chandrasekaran"
               target="_blank"
               rel="noreferrer"
-              className="group text-white w-fit px-2 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+              className="group text-white w-fit px-2 py-2 my-2 mr-5 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
             >
               GitHub
               <span>
                 <AiOutlineGithub size={25} className="ml-1" />
+              </span>
+            </a>
+            <a
+              href="https://leetcode.com/gowtham6309/"
+              target="_blank"
+              rel="noreferrer"
+              className="group text-white w-fit px-2 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-pink-500 hover:to-yellow-500 cursor-pointer"
+            >
+              Leetcode
+              <span>
+                <SiLeetcode size={25} className="ml-1" />
               </span>
             </a>
           </div>
