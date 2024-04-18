@@ -77,7 +77,7 @@ const Portfolio = () => {
       id: 9,
       technology: "web",
       title: "Currency Converter",
-      text: " seamless currency conversion with our React-based application, featuring Tailwind CSS integration and real-time currency data from an API, including support for popular cryptocurrencies.",
+      text: "Seamless currency conversion with our React-based application, featuring Tailwind CSS integration and real-time currency data from an API, including support for popular cryptocurrencies.",
       link: "https://github.com/gowtham-chandrasekaran/React-Apps/tree/main/05CurrencyConverter",
     },
     {
