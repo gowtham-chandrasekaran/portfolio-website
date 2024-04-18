@@ -12,9 +12,9 @@ function App() {
     <div className="bg-gradient-to-b from-black to-gray-900">
       <NavBar />
       <Home />
+      <Portfolio />
       <About />
       <Experience />
-      <Portfolio />
       <Technologies />
       <Contact />
       <SocialLinks />

@@ -27,7 +27,7 @@ const Portfolio = () => {
     {
       id: 2,
       technology: "ml",
-      title: "College database custom ChatGPT",
+      title: "College Database Custom ChatGPT",
       text: "Created a Streamlit chatbot with OpenAI function call and SQL integration, enabling English language interactions and dynamic responses based on the college database.",
       link: "https://github.com/gowtham-chandrasekaran/College-Database-Custom-ChatGPT",
     },
@@ -54,7 +54,7 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      technology: "web",
+      technology: "other",
       title: "Drone Logistics Routing",
       text: "Implemented a time and resource-efficient solution to find the optimal route for drones to deliver from a warehouse to different locations using the concept of the traveling salesman technique.",
       link: "https://github.com/gowthambalboa/Optimal-Logistics-Routing-for-Drones",
@@ -65,6 +65,41 @@ const Portfolio = () => {
       title: "Targeted Advertising",
       text: "Collected multiple consumer emails and used Mahout to cluster users based on their interests by analyzing the most frequent terms used in the emails and then target advertisements to each group.",
       link: "https://github.com/gowthambalboa/Targeted-Advertising",
+    },
+    {
+      id: 8,
+      technology: "web",
+      title: "Password Generator",
+      text: "Empower your security with a customizable password generator app, capable of generating passwords up to 40 characters in length, with optional inclusion of numbers and special characters.",
+      link: "https://github.com/gowtham-chandrasekaran/React-Apps/tree/main/04PasswordGenerator",
+    },
+    {
+      id: 9,
+      technology: "web",
+      title: "Currency Converter",
+      text: " seamless currency conversion with our React-based application, featuring Tailwind CSS integration and real-time currency data from an API, including support for popular cryptocurrencies.",
+      link: "https://github.com/gowtham-chandrasekaran/React-Apps/tree/main/05CurrencyConverter",
+    },
+    {
+      id: 10,
+      technology: "cloud",
+      title: "Video on Demand Full Stack Web Application using GCP",
+      text: " Seamlessly integrated user authentication, video compression and upload in the next.js application. Implemented Docker containerzation and Cloud Run deployment on GCP for scalable and highly available media.",
+      link: "https://github.com/gowtham-chandrasekaran/youtube-clone",
+    },
+    {
+      id: 11,
+      technology: "web",
+      title: "Expense Tracker",
+      text: " Created an expense tracker application that displays expenses made in a year and has functionalities like adding, deleting, and filtering expenses based on a year.",
+      link: "https://expense-tracker-gowtham.netlify.app/",
+    },
+    {
+      id: 12,
+      technology: "cloud",
+      title: "Serverless Face Mask Violation Detection Using Flask and AWS",
+      text: "Attained 98% accuracy in face mask violation detection using AWS Rekognition. Ensured scalability and zero downtime with AWS Lambda, AWS SQS, and load balancer.",
+      link: "https://github.com/gowtham-chandrasekaran/Face-Mask-Violation-Detection-using-AWS-services",
     },
   ];
 
@@ -111,7 +146,7 @@ const Portfolio = () => {
                 : "bg-gradient-to-r from-blue-500 to-cyan-500"
             } hover:from-pink-500 hover:to-yellow-500 cursor-pointer`}
           >
-            Machine Learning Projects
+            AI/ML
           </button>
           <button
             onClick={() => setActiveTechnology("web")}
@@ -121,7 +156,27 @@ const Portfolio = () => {
                 : "bg-gradient-to-r from-blue-500 to-cyan-500"
             } hover:from-pink-500 hover:to-yellow-500 cursor-pointer`}
           >
-            Web Application Projects
+            React
+          </button>
+          <button
+            onClick={() => setActiveTechnology("cloud")}
+            className={`text-white w-fit px-2 py-2 my-2 mr-3 flex items-center rounded-md ${
+              activeTechnology === "cloud"
+                ? "bg-blue-700"
+                : "bg-gradient-to-r from-blue-500 to-cyan-500"
+            } hover:from-pink-500 hover:to-yellow-500 cursor-pointer`}
+          >
+            Cloud
+          </button>
+          <button
+            onClick={() => setActiveTechnology("other")}
+            className={`text-white w-fit px-2 py-2 my-2 mr-3 flex items-center rounded-md ${
+              activeTechnology === "cloud"
+                ? "bg-blue-700"
+                : "bg-gradient-to-r from-blue-500 to-cyan-500"
+            } hover:from-pink-500 hover:to-yellow-500 cursor-pointer`}
+          >
+            Other
           </button>
         </div>
         <motion.div
