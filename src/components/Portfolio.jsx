@@ -42,7 +42,7 @@ const Portfolio = () => {
       id: 4,
       technology: "web",
       title: "Covid19 Dashboard",
-      text: "Designed and implemented a dashboard using HTML, CSS, Javascript to display covid cases of different countries along with a graph to see the trend in that selected country.",
+      text: "Designed and implemented a dashboard to display covid cases of different countries along with a graph to see the trend in that selected country.",
       link: "https://github.com/gowthambalboa/COVID19-Dashboard",
     },
     {
