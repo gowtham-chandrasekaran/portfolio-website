@@ -18,6 +18,13 @@ const Portfolio = () => {
 
   const portfolios = [
     {
+      id: 1.1,
+      technology: "ml",
+      title: "Generative AI Fitness Coach",
+      text: "Developed a generative AI-based chatbot using OpenAI's GPT-3.5 and OpenAI Assistant to provide personalized fitness advice. Utilized Next.js, TypeScript for the frontend development to create an interactive user interface.",
+      link: "https://generative-ai-fitness-app.vercel.app/",
+    },
+    {
       id: 1,
       technology: "ml",
       title: "Driver Distraction Detection",
