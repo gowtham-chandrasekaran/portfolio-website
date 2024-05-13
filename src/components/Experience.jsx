@@ -108,7 +108,7 @@ const Experience = () => {
                 value="2"
                 trigger="Software Engineering Assistant"
                 subText="San Jose State University"
-                dateText="May 2023 - Dec 2023"
+                dateText="May 2023 - Present"
               >
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
