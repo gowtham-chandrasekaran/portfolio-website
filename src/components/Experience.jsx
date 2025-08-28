@@ -71,6 +71,9 @@ const Experience = () => {
                       Led Agile feature delivery and sprint management for a cross-functional engineering team, increasing development velocity and code quality.
                     </li>
                   </ul>
+                  <p className="mt-4">
+                    Tech Stack: Node.js, React, Langchain.js, Llama 3.3 70B, BGE embeddings, Qdrant, Presidio, GPT-4, AWS (Cognito, CodePipeline, EC2, S3, CloudWatch), REST APIs, Docker, Git, Agile
+                  </p>
                 </div>
               </AccordianItem>
 
@@ -82,46 +85,32 @@ const Experience = () => {
                 dateText="Aug 2024 - Nov 2024"
               >
                 <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">Data Deduplication</h2>
+                  <h2 className="text-xl font-bold mb-4">Generative AI Development</h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Spearheaded deduplication of 150,000 web-scraped articles
-                      using DBSCAN and Fuzzywuzzy
+                      Built GenAI-powered travel app features with RAG chatbot architecture, leveraging LangChain, OpenAI embeddings, cross-encoder reranking, and Amazon Bedrock’s Llama 3.1 70B model for highly relevant itinerary recommendations.
                     </li>
-                    <li>Reduced duplicate data by 45%</li>
+                    <li>Enhanced contextual reliability and user personalization using role-based prompt engineering and automated evaluation with LLM-as-a-judge.</li>
                   </ul>
                 </div>
 
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    AI-Powered Content Generation
+                    Full Stack Development & Data Engineering
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Utilized Amazon Bedrock's Llama 3.1 70B model for travel
-                      guide content generation
+                      Designed and implemented FastAPI backends for real-time, low-latency data retrieval and contextual audio guides.
                     </li>
                     <li>
-                      Improved content relevance by 25% through strategic prompt
-                      engineering
+                      Developed Selenium-based web scrapers and applied DBSCAN clustering for large-scale location data deduplication and consistency.
                     </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Database Management
-                  </h2>
-                  <ul className="list-disc list-inside">
                     <li>
-                      Leveraged AWS RDS with PostgreSQL for efficient storage of
-                      web-scraped content
+                      Managed secure, scalable cloud storage using AWS RDS and PostgreSQL, optimizing data pipelines for travel content delivery.
                     </li>
-                    <li>Ensured secure and scalable data storage</li>
                   </ul>
                   <p className="mt-4">
-                    Tech Stack: DBSCAN, Fuzzywuzzy, Amazon Bedrock, Llama 3.1
-                    70B, AWS RDS, PostgreSQL
+                    Tech Stack: DBSCAN, Fuzzywuzzy, Amazon Bedrock, Llama 3.1 70B, AWS RDS, PostgreSQL, FastAPI, Selenium, LangChain, OpenAI, AWS (EC2, S3, Lambda)
                   </p>
                 </div>
               </AccordianItem>
@@ -135,32 +124,26 @@ const Experience = () => {
               >
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    Streamlit Chatbot Development
+                    Generative AI Solutions
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Developed a Streamlit chatbot with OpenAI and SQL database
-                      integration
+                      Developed a Streamlit chatbot integrated with OpenAI and SQL databases, enabling natural language data queries and automating information retrieval for non-technical staff.
                     </li>
-                    <li>
-                      Enabled non-technical staff to easily retrieve information
-                      from the college database
-                    </li>
+                    
                   </ul>
                 </div>
 
                 <div>
                   <h2 className="text-xl font-bold mb-4">
-                    Web Analytics and Optimization
+                    Web Analytics & Digital Optimization
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Utilized Google Analytics for audience, acquisition, and
-                      behavior analysis
+                      Utilized Google Analytics for advanced audience, acquisition, and user behavior analysis, delivering actionable insights for website content strategy.
                     </li>
                     <li>
-                      Used Siteimprove for fixing broken links and improving
-                      website quality
+                      Enhanced digital reliability and accessibility by identifying and resolving broken links with Siteimprove, improving overall user experience.
                     </li>
                   </ul>
                   <p className="mt-4">
@@ -179,81 +162,52 @@ const Experience = () => {
               >
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    H&M Retail Tags Management Dashboard
+                    Full Stack Application Development
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Developed dashboard for product tags creation and
-                      management
+                      Engineered interactive dashboards and Single Page Applications (SPAs) using React, Spring Boot, and Chart.js for enterprise-grade metric visualization and reporting.
                     </li>
                     <li>
-                      Created microservices using Spring Boot for enhanced
-                      scalability
+                      Optimized application performance with lazy loading, Redux state management, and code-splitting, reducing load times and improving scalability.
                     </li>
                   </ul>
                 </div>
 
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    Citibank Server Metrics Dashboard
+                    Cloud Architecture & DevOps
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Developed a Single Page Application (SPA) using React
+                      Architected secure, scalable AWS cloud solutions, integrating EC2, S3, Lambda, RDS, DynamoDB, CloudWatch, and CloudTrail for comprehensive monitoring and logging.
                     </li>
                     <li>
-                      Visualized metrics using Chart.js for enhanced data
-                      interpretation
+                      Orchestrated CI/CD pipelines using Jenkins, Docker, and Kubernetes for automated deployments and infrastructure efficiency.
                     </li>
-                    <li>
-                      Implemented lazy loading and used React Profiler for
-                      performance optimization
-                    </li>
+                    
                   </ul>
                 </div>
 
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    AWS Architecture and DevOps
+                    Backend Engineering & Security
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Architected solutions using AWS services (EC2, S3, Lambda,
-                      RDS, DynamoDB)
+                      Developed robust backend services with Node.js, Express.js, and RESTful APIs, implementing OAuth 2.0 and JWT for secure authentication and authorization.
                     </li>
                     <li>
-                      Integrated AWS CloudWatch and CloudTrail for monitoring
-                      and logging
+                      Improved code quality and reliability through best practices, peer reviews, and automated testing (Jest, Enzyme), reducing production bugs.
                     </li>
-                    <li>
-                      Orchestrated CI/CD pipelines using Jenkins, Docker, and
-                      Kubernetes
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Backend Development and Database Management
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Created backend services using Node.js with Express.js
-                    </li>
-                    <li>
-                      Implemented SQL and NoSQL queries, stored procedures, and
-                      triggers
-                    </li>
-                    <li>
-                      Enabled RESTful APIs with OAuth 2.0 and JWT for enhanced
-                      security
-                    </li>
+                    
                   </ul>
                   <p className="mt-4">
-                    Tech Stack: React, Angular, Spring Boot, Node.js, AWS,
-                    Docker, Kubernetes, SQL, NoSQL, Jenkins
+                    Tech Stack: React, Node.js, Express.js, Spring Boot, Chart.js, AWS (EC2, S3, Lambda, RDS, DynamoDB, CloudWatch, CloudTrail), Docker, Kubernetes, Jenkins, OAuth 2.0, JWT, MongoDB, REST APIs, Git, Agile
                   </p>
                 </div>
+
+                
               </AccordianItem>
             </Accordian>
             {/* <Accordian>
