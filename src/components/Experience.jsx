@@ -94,7 +94,7 @@ const Experience = () => {
                 value="2"
                 trigger="Software Engineer"
                 subText="Jaunt"
-                dateText="Aug 2024 - Present"
+                dateText="Aug 2024 - Nov 2024"
               >
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">Data Deduplication</h2>
