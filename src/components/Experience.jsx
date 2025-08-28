@@ -38,54 +38,39 @@ const Experience = () => {
               >
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    Email System Architecture
+                    Generative AI Development
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Architected and implemented a comprehensive email system
-                      using SendGrid, Nest.js, and Angular
+                      Developed and deployed Retrieval-Augmented Generation (RAG) chatbots using Langchain.js, Llama 3.3 70B, BGE embeddings, and Qdrant vector database, increasing query speed and enhancing natural language understanding.
                     </li>
                     <li>
-                      Increased user engagement by 40% and reduced communication
-                      latency by 25%
+                      Implemented advanced PII masking with Presidio and LLM guardrails to ensure end-to-end data privacy and regulatory compliance for sensitive user information.
+                    </li>
+                    <li>
+                      Engineered an AI-driven podcast interviewer leveraging GPT-4, speech-to-text (STT), and text-to-speech (TTS) technologies, boosting user engagement and session duration.
                     </li>
                   </ul>
                 </div>
 
                 <div className="mb-8">
                   <h2 className="text-xl font-bold mb-4">
-                    AI Podcast Feature Development
+                    Full Stack & Cloud Engineering
                   </h2>
                   <ul className="list-disc list-inside">
                     <li>
-                      Developing an AI Podcast Feature using Retrieval-Augmented
-                      Generation (RAG)
+                      Architected scalable Node.js microservices and React front-end applications, applying lazy loading and optimizing load times for high-performance user experiences.
                     </li>
                     <li>
-                      Utilizing Amazon Bedrock production models including
-                      Claude, Llama, and Anthropic
+                      Integrated AWS Cognito for secure user authentication and access management, and automated AWS deployments using CodePipeline, EC2, S3, and CloudWatch for real-time monitoring.
+                    </li>
+                    <li>
+                      Strengthened AWS cloud security with IAM policies, encryption, and vulnerability remediation, achieving zero-issue audit results.
+                    </li>
+                    <li>
+                      Led Agile feature delivery and sprint management for a cross-functional engineering team, increasing development velocity and code quality.
                     </li>
                   </ul>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Full-Stack Development and Maintenance
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Engaged in ad hoc development across front-end and
-                      back-end
-                    </li>
-                    <li>
-                      Provided code reviews and technical support to ensure code
-                      quality and reliability
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: SendGrid, Nest.js, Angular, Amazon Bedrock, RAG,
-                    Claude, Llama, Anthropic
-                  </p>
                 </div>
               </AccordianItem>
 
