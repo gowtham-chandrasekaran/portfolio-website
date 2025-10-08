@@ -1,6 +1,24 @@
 // ChatBubble.jsx
 import React, { useState, useRef, useEffect } from 'react';
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://127.0.0.1:8000';
+// ChatBubble.jsx (top)
+function getApiBase() {
+  // Prefer Vite var if you ever migrate, then CRA var
+  const vite = typeof import.meta !== "undefined" ? import.meta.env?.VITE_API_BASE : undefined;
+  const cra  = process.env.REACT_APP_API_BASE;
+
+  // Fallbacks: local in dev, deployed URL in prod (edit to your prod URL)
+  const fallback =
+    process.env.NODE_ENV === "production"
+      ? "https://p01--portfolio-chatbot-backend--bk4hgjp4zlpc.code.run"
+      : "http://127.0.0.1:8000";
+
+  // pick and normalize (remove trailing slash)
+  const base = (vite || cra || fallback).replace(/\/+$/, "");
+  return base;
+}
+
+const API_BASE = getApiBase();
+
 
 const ChatBubble = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,12 +106,12 @@ const ChatBubble = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE}/chat`, {
+      const url = `${API_BASE}/chat`; // no double slashes now
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
-          // NOTE: Do not send Access-Control-Allow-Origin from client; server must set CORS.
         },
         mode: 'cors',
         credentials: 'omit',

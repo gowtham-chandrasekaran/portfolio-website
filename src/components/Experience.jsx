@@ -170,13 +170,9 @@ const Experience = () => {
                     <div className="flex flex-wrap items-center gap-x-3">
                       <h3 className="text-lg font-semibold text-white">{exp.role}</h3>
                       <span className="text-slate-400">•</span>
-                      <a
-                        className="text-sky-300 hover:text-sky-200 underline-offset-2"
-                        href="#"
-                        onClick={(e) => e.preventDefault()}
-                      >
+                      
                         {exp.company}
-                      </a>
+                      
                     </div>
                     <p className="text-sm text-slate-400 mt-0.5">{exp.dates}</p>
                   </div>
