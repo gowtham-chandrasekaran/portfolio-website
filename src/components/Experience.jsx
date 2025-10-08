@@ -1,363 +1,216 @@
 import React from "react";
-import Accordian, { AccordianItem } from "./Accordian";
 import { motion } from "framer-motion";
 
-const divAnimate = {
-  offscreen: { x: 0, opacity: 0 },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 1 },
-  },
+/* ============ SMALL ICONS (inline SVGs, no deps) ============ */
+const Icon = ({ name, className = "" }) => {
+  const common = { fill: "none", stroke: "currentColor", strokeWidth: 1.5 };
+  switch (name) {
+    case "briefcase":
+      return (
+        <svg viewBox="0 0 24 24" className={`h-5 w-5 ${className}`} {...common}>
+          <rect x="3" y="7" width="18" height="12" rx="2" />
+          <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+          <path d="M3 12h18" />
+        </svg>
+      );
+    case "chevron":
+      return (
+        <svg viewBox="0 0 24 24" className={`h-4 w-4 ${className}`} {...common}>
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      );
+    default:
+      return (
+        <svg viewBox="0 0 24 24" className={`h-5 w-5 ${className}`} {...common}>
+          <circle cx="12" cy="12" r="9" />
+        </svg>
+      );
+  }
 };
 
+/* ============ ANIMATION VARIANTS ============ */
+const cardVariants = {
+  offscreen: { y: 8, opacity: 0 },
+  onscreen: { y: 0, opacity: 1, transition: { duration: 0.45, ease: "easeOut" } },
+};
+
+/* ============ DATA (edit content here) ============ */
+const EXPERIENCES = [
+  {
+    role: "Software Engineer",
+    company: "Thereafter, Inc.",
+    dates: "Aug 2024 – Present",
+    sections: [
+      {
+        title: "Generative AI Development",
+        bullets: [
+          "Built RAG chatbots (LangChain.js, Llama 3.3 70B, BGE, Qdrant) improving retrieval quality and response speed.",
+          "Added PII masking with Presidio and guardrails for privacy/regulatory compliance.",
+          "Shipped AI ‘podcast interviewer’ using GPT-4 + STT/TTS (higher engagement & session length).",
+        ],
+      },
+      {
+        title: "Full Stack & Cloud Engineering",
+        bullets: [
+          "Architected Node.js microservices + React; applied lazy loading and performance optimizations.",
+          "Integrated AWS Cognito; automated deployments (EC2/S3/CodePipeline) with CloudWatch monitoring.",
+          "Hardened AWS security with IAM and encryption; led Agile delivery to raise team velocity.",
+        ],
+        foot: "Stack: Node.js, React, LangChain.js, Llama 3.3, BGE, Qdrant, Presidio, GPT-4, AWS (Cognito, CodePipeline, EC2, S3, CloudWatch), REST, Docker, Git, Agile",
+      },
+    ],
+  },
+  {
+    role: "Software Engineer",
+    company: "Jaunt",
+    dates: "Aug 2024 – Nov 2024",
+    sections: [
+      {
+        title: "Generative AI Development",
+        bullets: [
+          "RAG features with LangChain, OpenAI embeddings, cross-encoder rerankers, Bedrock Llama 3.1 70B.",
+          "Improved personalization using role-based prompting and LLM-as-Judge evaluation.",
+        ],
+      },
+      {
+        title: "Full Stack Development & Data Engineering",
+        bullets: [
+          "FastAPI services for low-latency retrieval and contextual audio guides.",
+          "Selenium scrapers + DBSCAN clustering for dedupe/consistency of location data.",
+          "AWS RDS/PostgreSQL for secure, scalable storage and pipelines.",
+        ],
+        foot: "Stack: DBSCAN, FuzzyWuzzy, Bedrock Llama 3.1, AWS RDS, PostgreSQL, FastAPI, Selenium, LangChain, OpenAI, AWS (EC2, S3, Lambda)",
+      },
+    ],
+  },
+  {
+    role: "Software Engineering Assistant",
+    company: "San Jose State University",
+    dates: "Dec 2023 – Jul 2024",
+    sections: [
+      {
+        title: "Generative AI Solutions",
+        bullets: [
+          "Streamlit chatbot with OpenAI + SQL for natural-language data access by non-technical staff.",
+        ],
+      },
+      {
+        title: "Web Analytics & Digital Optimization",
+        bullets: [
+          "Advanced audience/acquisition analysis in Google Analytics for content strategy.",
+          "Fixed broken links with Siteimprove to improve reliability and accessibility.",
+        ],
+        foot: "Stack: Streamlit, OpenAI, SQL, Google Analytics, Siteimprove",
+      },
+    ],
+  },
+  {
+    role: "Software Engineer",
+    company: "Tata Consultancy Services",
+    dates: "May 2019 – May 2021",
+    sections: [
+      {
+        title: "Full Stack Application Development",
+        bullets: [
+          "Dashboards & SPAs with React, Spring Boot, Chart.js for enterprise metrics.",
+          "Performance wins via lazy loading, Redux, and code-splitting.",
+        ],
+      },
+      {
+        title: "Cloud Architecture & DevOps",
+        bullets: [
+          "Secure AWS solutions (EC2, S3, Lambda, RDS, DynamoDB, CloudWatch/Trail).",
+          "CI/CD with Jenkins, Docker, Kubernetes for automated deploys.",
+        ],
+      },
+      {
+        title: "Backend Engineering & Security",
+        bullets: [
+          "Node.js/Express REST services with OAuth 2.0 + JWT auth.",
+          "Quality via best practices, PRs, and automated tests (Jest, Enzyme).",
+        ],
+        foot: "Stack: React, Node.js, Express.js, Spring Boot, Chart.js, AWS (EC2, S3, Lambda, RDS, DynamoDB, CloudWatch, CloudTrail), Docker, Kubernetes, Jenkins, OAuth 2.0, JWT, MongoDB, REST, Git, Agile",
+      },
+    ],
+  },
+];
+
+/* ============ COMPONENT ============ */
 const Experience = () => {
   return (
     <div name="experience" className="w-full py-[80px] sm:pb-0 text-white">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full">
+        {/* Header */}
         <div className="pb-2">
           <p className="text-3xl sm:text-4xl font-bold inline border-b-4 border-gray-500">
             Experience
           </p>
         </div>
+
+        {/* Cards list */}
         <motion.div
-          class="mx-auto px-4 sm:px-0 py-8"
-          initial={"offscreen"}
-          whileInView={"onscreen"}
-          viewport={{ once: true, amount: 0.2 }}
-          variants={divAnimate}
+          className="mt-6 space-y-5"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ staggerChildren: 0.08 }}
         >
-          <div className="flex flex-col items-center justify-between">
-            <Accordian>
-              <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-5 shadow-blue-600"
-                value="1"
-                trigger="Software Engineer"
-                subText="Thereafter, Inc."
-                dateText="Aug 2024 - Present"
-              >
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Generative AI Development
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Developed and deployed Retrieval-Augmented Generation (RAG) chatbots using Langchain.js, Llama 3.3 70B, BGE embeddings, and Qdrant vector database, increasing query speed and enhancing natural language understanding.
-                    </li>
-                    <li>
-                      Implemented advanced PII masking with Presidio and LLM guardrails to ensure end-to-end data privacy and regulatory compliance for sensitive user information.
-                    </li>
-                    <li>
-                      Engineered an AI-driven podcast interviewer leveraging GPT-4, speech-to-text (STT), and text-to-speech (TTS) technologies, boosting user engagement and session duration.
-                    </li>
-                  </ul>
+          {EXPERIENCES.map((exp) => (
+            <motion.details
+              key={`${exp.role}-${exp.company}-${exp.dates}`}
+              variants={cardVariants}
+              className="group rounded-2xl bg-slate-900/70 ring-1 ring-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+            >
+              <summary className="list-none cursor-pointer select-none">
+                <div className="flex items-start gap-3 p-5 md:p-6">
+                  <div className="shrink-0 grid place-content-center h-10 w-10 rounded-xl ring-1 text-sky-300 bg-sky-500/15 ring-sky-400/30">
+                    <Icon name="briefcase" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-x-3">
+                      <h3 className="text-lg font-semibold text-white">{exp.role}</h3>
+                      <span className="text-slate-400">•</span>
+                      <a
+                        className="text-sky-300 hover:text-sky-200 underline-offset-2"
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        {exp.company}
+                      </a>
+                    </div>
+                    <p className="text-sm text-slate-400 mt-0.5">{exp.dates}</p>
+                  </div>
+                  <div className="mt-1 text-slate-400 transition-transform group-open:rotate-180">
+                    <Icon name="chevron" />
+                  </div>
                 </div>
+              </summary>
 
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Full Stack & Cloud Engineering
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Architected scalable Node.js microservices and React front-end applications, applying lazy loading and optimizing load times for high-performance user experiences.
-                    </li>
-                    <li>
-                      Integrated AWS Cognito for secure user authentication and access management, and automated AWS deployments using CodePipeline, EC2, S3, and CloudWatch for real-time monitoring.
-                    </li>
-                    <li>
-                      Strengthened AWS cloud security with IAM policies, encryption, and vulnerability remediation, achieving zero-issue audit results.
-                    </li>
-                    <li>
-                      Led Agile feature delivery and sprint management for a cross-functional engineering team, increasing development velocity and code quality.
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: Node.js, React, Langchain.js, Llama 3.3 70B, BGE embeddings, Qdrant, Presidio, GPT-4, AWS (Cognito, CodePipeline, EC2, S3, CloudWatch), REST APIs, Docker, Git, Agile
-                  </p>
-                </div>
-              </AccordianItem>
+              {/* content */}
+              <div className="px-5 pb-5 md:px-6 md:pb-6">
+                {exp.sections.map((sec, i) => (
+                  <div key={i} className={i > 0 ? "mt-6" : ""}>
+                    <h4 className="text-base font-semibold mb-3">{sec.title}</h4>
+                    {sec.bullets?.length > 0 && (
+                      <ul className="list-disc list-inside space-y-2 text-slate-300">
+                        {sec.bullets.map((b, idx) => (
+                          <li key={idx}>{b}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {sec.foot && (
+                      <p className="mt-3 text-sm text-slate-400">
+                        {sec.foot}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
 
-              <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-5 shadow-blue-600"
-                value="2"
-                trigger="Software Engineer"
-                subText="Jaunt"
-                dateText="Aug 2024 - Nov 2024"
-              >
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">Generative AI Development</h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Built GenAI-powered travel app features with RAG chatbot architecture, leveraging LangChain, OpenAI embeddings, cross-encoder reranking, and Amazon Bedrock’s Llama 3.1 70B model for highly relevant itinerary recommendations.
-                    </li>
-                    <li>Enhanced contextual reliability and user personalization using role-based prompt engineering and automated evaluation with LLM-as-a-judge.</li>
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Full Stack Development & Data Engineering
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Designed and implemented FastAPI backends for real-time, low-latency data retrieval and contextual audio guides.
-                    </li>
-                    <li>
-                      Developed Selenium-based web scrapers and applied DBSCAN clustering for large-scale location data deduplication and consistency.
-                    </li>
-                    <li>
-                      Managed secure, scalable cloud storage using AWS RDS and PostgreSQL, optimizing data pipelines for travel content delivery.
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: DBSCAN, Fuzzywuzzy, Amazon Bedrock, Llama 3.1 70B, AWS RDS, PostgreSQL, FastAPI, Selenium, LangChain, OpenAI, AWS (EC2, S3, Lambda)
-                  </p>
-                </div>
-              </AccordianItem>
-
-              <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-5 shadow-blue-600"
-                value="3"
-                trigger="Software Engineering Assistant"
-                subText="San Jose State University"
-                dateText="Dec 2023 - Jul 2024"
-              >
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Generative AI Solutions
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Developed a Streamlit chatbot integrated with OpenAI and SQL databases, enabling natural language data queries and automating information retrieval for non-technical staff.
-                    </li>
-                    
-                  </ul>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Web Analytics & Digital Optimization
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Utilized Google Analytics for advanced audience, acquisition, and user behavior analysis, delivering actionable insights for website content strategy.
-                    </li>
-                    <li>
-                      Enhanced digital reliability and accessibility by identifying and resolving broken links with Siteimprove, improving overall user experience.
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: Streamlit, OpenAI, SQL, Google Analytics,
-                    Siteimprove
-                  </p>
-                </div>
-              </AccordianItem>
-
-              <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-4 shadow-blue-600"
-                value="4"
-                trigger="Software Engineer"
-                subText="Tata Consultancy Services"
-                dateText="May 2019 - May 2021"
-              >
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Full Stack Application Development
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Engineered interactive dashboards and Single Page Applications (SPAs) using React, Spring Boot, and Chart.js for enterprise-grade metric visualization and reporting.
-                    </li>
-                    <li>
-                      Optimized application performance with lazy loading, Redux state management, and code-splitting, reducing load times and improving scalability.
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Cloud Architecture & DevOps
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Architected secure, scalable AWS cloud solutions, integrating EC2, S3, Lambda, RDS, DynamoDB, CloudWatch, and CloudTrail for comprehensive monitoring and logging.
-                    </li>
-                    <li>
-                      Orchestrated CI/CD pipelines using Jenkins, Docker, and Kubernetes for automated deployments and infrastructure efficiency.
-                    </li>
-                    
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Backend Engineering & Security
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Developed robust backend services with Node.js, Express.js, and RESTful APIs, implementing OAuth 2.0 and JWT for secure authentication and authorization.
-                    </li>
-                    <li>
-                      Improved code quality and reliability through best practices, peer reviews, and automated testing (Jest, Enzyme), reducing production bugs.
-                    </li>
-                    
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: React, Node.js, Express.js, Spring Boot, Chart.js, AWS (EC2, S3, Lambda, RDS, DynamoDB, CloudWatch, CloudTrail), Docker, Kubernetes, Jenkins, OAuth 2.0, JWT, MongoDB, REST APIs, Git, Agile
-                  </p>
-                </div>
-
-                
-              </AccordianItem>
-            </Accordian>
-            {/* <Accordian>
-              <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-5 shadow-blue-600"
-                value="2"
-                trigger="Software Engineering Assistant"
-                subText="San Jose State University"
-                dateText="May 2023 - Jul 2024"
-              >
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Utilized Google Analytics and Siteimprove
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Performed audience, acquisition, and behavior analysis
-                      using Google Analytics
-                    </li>
-                    <li>
-                      Utilized Siteimprove for fixing broken links and enhancing
-                      website quality
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Created Department-Specific Reports on Looker Studio
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Visualized user sessions, page analytics, and other
-                      relevant metrics using Looker Studio
-                    </li>
-                    <li>
-                      Generated department-specific reports to provide
-                      actionable insights
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Built a Streamlit Chatbot integrated with OpenAI's large
-                    language model
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Developed a dynamic English chatbot using Streamlit and
-                      OpenAI's large language model
-                    </li>
-                    <li>
-                      Utilized SQL for database interactions to enhance chatbot
-                      functionality
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: OpenAI, Google Analytics, Looker Studio, Python,
-                    Siteimprove, Docusign, HTML, CSS, Javascript, Microsoft
-                    Excel, Google Sheets
-                  </p>
-                </div>
-              </AccordianItem>
-              <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-4 shadow-blue-600"
-                value="1"
-                trigger="Software Engineer"
-                subText="Tata Consultancy Services"
-                dateText="May 2019 - May 2021"
-              >
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    React Web Development for Banking Industry at CitiBank
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Developed key components of an API management dashboard
-                      using React, visualizing API metrics
-                    </li>
-                    <li>
-                      Implemented 2-factor authentication by integrating OAuth
-                      2.0
-                    </li>
-                    <li>
-                      Acted as Scrum Master, overseeing Kanban backlog
-                      management and Jira-based retrospectives in Agile
-                      development
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: React, Chart.js, Node.js, Git, Jira, Kubernetes,
-                    Docker, MongoDB, REST API
-                  </p>
-                </div>
-
-                <div className="mb-8">
-                  <h2 className="text-xl font-bold mb-4">
-                    Angular JS Web Development for E-Commerce Industry at H&M
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Expertise in developing RESTful APIs to facilitate
-                      seamless data exchange and enhance user experiences
-                    </li>
-                    <li>
-                      Developed unit test cases and functional test automation
-                      code, ensuring the delivery of high-quality, accessible
-                      code
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: Angular JS, SQL (Microsoft SQL Server), REST
-                    API, HTML, CSS, Tailwind
-                  </p>
-                </div>
-
-                <div>
-                  <h2 className="text-xl font-bold mb-4">
-                    Customer Experience Enhancement for E-Commerce Industry at
-                    Aldi
-                  </h2>
-                  <ul className="list-disc list-inside">
-                    <li>
-                      Streamlined product catalog management, shopping cart, and
-                      secure checkout pages using Adobe Experience Manager
-                    </li>
-                    <li>
-                      Integrated Adobe Campaign and Marketo for personalized
-                      email marketing, boosting conversion rates by 85%
-                    </li>
-                  </ul>
-                  <p className="mt-4">
-                    Tech Stack: Adobe Experience Manager, Adobe Campaign
-                    Classic, Marketo, HTML, CSS, Python
-                  </p>
-                </div>
-              </AccordianItem>
-              {/* <AccordianItem
-                className="rounded-lg bg-gray-800 shadow-md mb-5 shadow-blue-600 p-8"
-                value="3"
-                trigger="Accordian Item 3"
-              >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Suscipit, quas? Non enim obcaecati eaque quaerat consequatur
-                vero consequuntur vel fugit, quia nam ipsum voluptates quos a,
-                doloribus velit cupiditate. Praesentium?
-              </AccordianItem> */}
-            {/* </Accordian> */}
-          </div>
+              {/* subtle bottom accent like your screenshot */}
+              <div className="h-[3px] rounded-b-2xl bg-gradient-to-r from-transparent via-sky-600/60 to-transparent" />
+            </motion.details>
+          ))}
         </motion.div>
       </div>
     </div>

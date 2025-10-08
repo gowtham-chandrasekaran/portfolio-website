@@ -62,11 +62,15 @@ const SocialLinks = () => {
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
-              " " +
-              style
-            }
+            className={[
+              "group flex items-center w-56 h-12 px-3",
+              "ml-[-180px] hover:ml-[-8px] focus-within:ml-[-8px]",
+              "transition-all duration-300",
+              "bg-slate-900/70 backdrop-blur ring-1 ring-white/10",
+              "shadow-[0_8px_24px_rgba(0,0,0,0.35)]",
+              "rounded-r-2xl", // base rounding
+              style, // keep your top/bottom rounding
+            ].join(" ")}
           >
             <a
               href={href}

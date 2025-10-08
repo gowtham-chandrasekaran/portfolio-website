@@ -1,4 +1,5 @@
 import About from "./components/About";
+import ChatBubble from "./components/ChatBubble";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Home from "./components/Home";
@@ -18,6 +19,7 @@ function App() {
       <Technologies />
       <Contact />
       <SocialLinks />
+      <ChatBubble />
     </div>
   );
 }

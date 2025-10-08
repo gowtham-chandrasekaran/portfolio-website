@@ -4,60 +4,74 @@ import { FiPhone } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const divAnimate = {
-  offscreen: { x: 0, opacity: 0 },
+  offscreen: { y: 8, opacity: 0 },
   onscreen: {
-    x: 0,
+    y: 0,
     opacity: 1,
-    transition: { duration: 1 },
+    transition: { duration: 0.45, ease: "easeOut" },
   },
 };
 
 const Contact = () => {
   return (
     <div name="contact" className="w-full py-[80px] text-white">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-8">
+      <div className="max-w-screen-xl mx-auto p-4 flex flex-col justify-center w-full h-full">
+        {/* header */}
+        <div className="pb-2">
           <p className="text-3xl sm:text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
+          <p className="mt-3 text-slate-400">
+            I’m quickest over email. Feel free to call for anything time-sensitive.
+          </p>
         </div>
+
+        {/* card */}
         <motion.div
-          class="w-full mx-auto px-4 py-8"
-          className="py-[60px]"
-          initial={"offscreen"}
-          whileInView={"onscreen"}
-          viewport={{ once: true, amount: 0.2 }}
+          className="mt-6"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.15 }}
           variants={divAnimate}
         >
-          <style>
-            {`
-                    @keyframes glowing {
-                        0% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-                        50% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37,99,235, 0.8); }
-                        100% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-                    }
+          <section className="rounded-2xl bg-slate-900/70 ring-1 ring-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+            <div className="p-6 md:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              {/* left blurb */}
+              <div>
+                <h3 className="text-lg font-semibold">Let’s talk</h3>
+                <p className="mt-1 text-slate-400">
+                  Available for AI/Full-Stack opportunities and collaborations.
+                </p>
+              </div>
 
-                    .glow {
-                        animation: glowing 2s infinite;
-                    }
-                `}
-          </style>
+              {/* actions */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                <a
+                  href="mailto:gowtham6309@gmail.com"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-600 text-white ring-1 ring-sky-400/40 hover:bg-sky-500 transition-colors"
+                >
+                  <HiOutlineMail size={20} />
+                  <span>gowtham6309@gmail.com</span>
+                </a>
 
-          <section className="flex flex-col lg:flex-row items-center justify-center lg:justify-evenly rounded-lg bg-gray-800 shadow-md p-8 glow">
-            <p className="text-white text-2xl mb-4 lg:mb-0 lg:mr-8">
-              Reach me at
-            </p>
-            <div className="flex flex-col lg:flex-row items-center">
-              <p className="text-white text-lg flex items-center mb-4 lg:mb-0 lg:mr-8">
-                <HiOutlineMail size={27} />
-                gowtham6309@gmail.com
-              </p>
-              <p className="text-white text-lg flex items-center">
-                <FiPhone size={27} />
-                +1 669 204 1307
-              </p>
+                <a
+                  href="tel:+16692041307"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
+                >
+                  <FiPhone size={18} />
+                  <span>+1&nbsp;669&nbsp;204&nbsp;1307</span>
+                </a>
+              </div>
             </div>
+
+            {/* bottom accent */}
+            <div className="h-[3px] rounded-b-2xl bg-gradient-to-r from-transparent via-sky-600/60 to-transparent" />
           </section>
+
+          {/* optional note */}
+          <p className="mt-3 text-xs text-slate-400">
+            Tip: click the email or phone to open your default app.
+          </p>
         </motion.div>
       </div>
     </div>

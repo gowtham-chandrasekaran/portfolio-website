@@ -4,79 +4,96 @@ import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+
   const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 4,
-      link: "portfolio",
-    },
-    {
-      id: 2,
-      link: "education",
-    },
-    {
-      id: 3,
-      link: "experience",
-    },
-    {
-      id: 5,
-      link: "technologies",
-    },
-    {
-      id: 6,
-      link: "contact",
-    },
+    { id: 1, link: "home" },
+    { id: 4, link: "portfolio" },
+    { id: 2, link: "education" },
+    { id: 3, link: "experience" },
+    { id: 5, link: "technologies" },
+    { id: 6, link: "contact" },
   ];
 
   return (
-    <div className="flex justify-between items-center px-4 py-2 w-full h-30 text-white bg-black fixed">
-      <div>
-        <h1 className="text-4xl font-signature ml-2">&#123;GOWTHAM&#125;</h1>
-      </div>
-
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+    <nav className="fixed inset-x-0 top-0 z-50">
+      {/* glass bar */}
+      <div className="mx-auto max-w-screen-xl">
+        <div className="mt-0 flex items-center justify-between px-4 py-3
+                        rounded-b-2xl bg-slate-900/70 backdrop-blur
+                        ring-1 ring-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+          {/* Brand */}
+          <Link
+            to="home"
+            smooth
+            duration={500}
+            className="cursor-pointer select-none"
           >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+                &#123;GOWTHAM&#125;
+              </span>
+            </h1>
+          </Link>
 
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          {/* Desktop menu */}
+          <ul className="hidden md:flex items-center gap-2">
+            {links.map(({ id, link }) => (
+              <li key={id}>
+                <Link
+                  to={link}
+                  smooth
+                  duration={500}
+                  spy
+                  offset={-80} // keeps section title from hiding under navbar
+                  activeClass="!bg-sky-600/20 !text-white ring-1 ring-sky-400/30"
+                  className="cursor-pointer capitalize text-sm text-slate-200
+                             px-3 py-1.5 rounded-full
+                             hover:bg-white/10 hover:text-white
+                             transition-colors ring-1 ring-white/0"
+                >
+                  {link}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile toggle */}
+          <button
+            aria-label="Toggle navigation"
+            aria-expanded={nav}
+            onClick={() => setNav((s) => !s)}
+            className="md:hidden text-slate-200 hover:text-white transition-colors"
+          >
+            {nav ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
 
+      {/* Mobile sheet */}
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize scroll-py-6 text-4xl"
-            >
-              <Link
-                onClick={() => setNav(!nav)}
-                to={link}
-                smooth
-                duration={500}
-              >
-                {link}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="md:hidden fixed inset-0 z-40 bg-slate-950/90 backdrop-blur">
+          <ul className="flex h-full flex-col items-center justify-center gap-6 px-6">
+            {links.map(({ id, link }) => (
+              <li key={id} className="w-full text-center">
+                <Link
+                  to={link}
+                  smooth
+                  duration={500}
+                  offset={-80}
+                  onClick={() => setNav(false)}
+                  className="block cursor-pointer capitalize
+                             text-white text-2xl py-3
+                             rounded-xl bg-white/5 ring-1 ring-white/10
+                             hover:bg-white/10 transition-colors"
+                >
+                  {link}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
-    </div>
+    </nav>
   );
 };
 
