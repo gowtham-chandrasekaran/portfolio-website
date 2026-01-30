@@ -37,7 +37,7 @@ const cardVariants = {
 /* ============ DATA (edit content here) ============ */
 const EXPERIENCES = [
   {
-    role: "Software Engineer",
+    role: "GenAI Engineer",
     company: "Thereafter, Inc.",
     dates: "Aug 2024 – Present",
     sections: [
@@ -61,7 +61,7 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Software Engineer",
+    role: "Data Scientist",
     company: "Jaunt",
     dates: "Aug 2024 – Nov 2024",
     sections: [
@@ -84,7 +84,7 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Software Engineering Assistant",
+    role: "Data Science Research Assistant",
     company: "San Jose State University",
     dates: "Dec 2023 – Jul 2024",
     sections: [
