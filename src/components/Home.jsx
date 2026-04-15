@@ -81,7 +81,7 @@ const Home = () => {
           </h1>
 
           <p className="text-slate-300 py-4 max-w-md">
-            As a full-stack engineer and GenAI builder, I ship resilient,
+            As a GenAI builder, I ship resilient,
             scalable products across web, cloud, and AI.
           </p>
 
@@ -130,7 +130,7 @@ const Home = () => {
 
           {/* tiny meta strip */}
           <div className="mt-6 text-xs text-slate-400">
-            Based in the Bay Area • Open to AI/Full-Stack roles
+            Currently working as a Senior Data Scientist at Citizens Bank.
           </div>
         </motion.div>
       </div>
