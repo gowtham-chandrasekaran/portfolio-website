@@ -43,17 +43,17 @@ const SocialLinks = () => {
       ),
       href: "mailto:gowtham6309@gmail.com",
     },
-    {
-      id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={27} />
-        </>
-      ),
-      href: "/Resume.pdf",
-      style: "rounded-br-md",
-      download: true,
-    },
+    // {
+    //   id: 4,
+    //   child: (
+    //     <>
+    //       Resume <BsFillPersonLinesFill size={27} />
+    //     </>
+    //   ),
+    //   href: "/Resume.pdf",
+    //   style: "rounded-br-md",
+    //   download: true,
+    // },
   ];
 
   return (

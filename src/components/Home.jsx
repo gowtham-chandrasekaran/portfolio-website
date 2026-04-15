@@ -87,7 +87,7 @@ const Home = () => {
 
           {/* action buttons – styled, same links */}
           <div className="flex flex-wrap justify-start sm:flex-row gap-3">
-            <a
+            {/* <a
               href="/Resume.pdf"
               target="_blank"
               rel="noreferrer"
@@ -95,7 +95,7 @@ const Home = () => {
             >
               Resume
               <MdKeyboardArrowRight size={22} className="transition-transform group-hover:translate-x-0.5" />
-            </a>
+            </a> */}
 
             <a
               href="https://www.linkedin.com/in/gowtham-c/"
