@@ -54,13 +54,7 @@ const Contact = () => {
                   <span>gowtham6309@gmail.com</span>
                 </a>
 
-                <a
-                  href="tel:+16692041307"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-slate-200 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
-                >
-                  <FiPhone size={18} />
-                  <span>+1&nbsp;669&nbsp;204&nbsp;1307</span>
-                </a>
+                
               </div>
             </div>
 
