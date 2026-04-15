@@ -61,29 +61,6 @@ const EXPERIENCES = [
     ],
   },
   {
-    role: "Data Scientist",
-    company: "Jaunt",
-    dates: "Aug 2024 – Nov 2024",
-    sections: [
-      {
-        title: "Generative AI Development",
-        bullets: [
-          "RAG features with LangChain, OpenAI embeddings, cross-encoder rerankers, Bedrock Llama 3.1 70B.",
-          "Improved personalization using role-based prompting and LLM-as-Judge evaluation.",
-        ],
-      },
-      {
-        title: "Full Stack Development & Data Engineering",
-        bullets: [
-          "FastAPI services for low-latency retrieval and contextual audio guides.",
-          "Selenium scrapers + DBSCAN clustering for dedupe/consistency of location data.",
-          "AWS RDS/PostgreSQL for secure, scalable storage and pipelines.",
-        ],
-        foot: "Stack: DBSCAN, FuzzyWuzzy, Bedrock Llama 3.1, AWS RDS, PostgreSQL, FastAPI, Selenium, LangChain, OpenAI, AWS (EC2, S3, Lambda)",
-      },
-    ],
-  },
-  {
     role: "Data Science Research Assistant",
     company: "San Jose State University",
     dates: "Dec 2023 – Jul 2024",
