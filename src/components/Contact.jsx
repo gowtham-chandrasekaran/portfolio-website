@@ -1,6 +1,5 @@
 import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiPhone } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const divAnimate = {
