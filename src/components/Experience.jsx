@@ -37,9 +37,25 @@ const cardVariants = {
 /* ============ DATA (edit content here) ============ */
 const EXPERIENCES = [
   {
+  role: "Senior Data Scientist",
+  company: "Citizens Bank",
+  dates: "Feb 2026 – Present",
+  sections: [
+    {
+      title: "Generative AI & Call Intelligence",
+      bullets: [
+        "Building a GenAI-based system to automatically generate disposition codes from customer care calls between agents and bank customers.",
+        "Leveraging AWS Connect to ingest and process customer call data for downstream GenAI workflows.",
+        "Using AWS S3 for scalable storage and management of call recordings and transcripts.",
+        "Implementing LLM orchestration and inference workflows using GDK (Citizens’ proprietary GenAI framework) to power call classification and summarization."
+      ]
+    }
+  ]
+},
+  {
     role: "GenAI Engineer",
     company: "Thereafter, Inc.",
-    dates: "Aug 2024 – Present",
+    dates: "Aug 2024 – Jan 2026",
     sections: [
       {
         title: "Generative AI Development",
